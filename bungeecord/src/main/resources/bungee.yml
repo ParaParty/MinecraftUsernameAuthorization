@@ -1,0 +1,4 @@
+name: Authorization
+version: ${project.version}
+main: com.superexercisebook.authorization.Authorization
+description: Check if this username need extra verfication
