@@ -168,8 +168,10 @@ jar.finalizedBy('reobfJar')
 
 shadowJar {
     dependencies {
-        include { it.moduleGroup == "com.fasterxml" }
-        include { it.moduleGroup == "com.squareup.okhttp3" }
+        include { it.moduleGroup.startsWith("com.fasterxml") }
+        include { it.moduleGroup.startsWith("com.squareup.okhttp3") }
+        include { it.moduleGroup.startsWith("com.squareup.okio") }
+        include { it.moduleGroup.startsWith("org.jetbrains.kotlin") }
         include { it.moduleGroup == "party.para" && it.moduleName == "paraparty-authorization" }
     }
 }
