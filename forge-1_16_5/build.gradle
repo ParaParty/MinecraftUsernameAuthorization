@@ -165,6 +165,11 @@ jar {
 }
 
 jar.finalizedBy('reobfJar')
+shadowJar.finalizedBy('reobfShadowJar')
+
+reobf {
+    shadowJar {}
+}
 
 shadowJar {
     dependencies {
@@ -173,11 +178,5 @@ shadowJar {
         include { it.moduleGroup.startsWith("com.squareup.okio") }
         include { it.moduleGroup.startsWith("org.jetbrains.kotlin") }
         include { it.moduleGroup == "party.para" && it.moduleName == "paraparty-authorization" }
-    }
-}
-
-tasks {
-    build {
-        dependsOn(shadowJar)
     }
 }

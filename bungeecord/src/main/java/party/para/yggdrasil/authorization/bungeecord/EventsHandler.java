@@ -10,8 +10,11 @@ import party.para.yggdrasil.authorization.core.model.CheckResult;
 import party.para.yggdrasil.authorization.core.service.AuthorizationService;
 import party.para.yggdrasil.authorization.core.service.implementation.AbstractAuthorizationService;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.logging.Level;
+import java.util.stream.Collectors;
 
 public class EventsHandler implements Listener {
 
